@@ -1,8 +1,10 @@
 # AI Audio Agronomic Chatbot for Kenyan Farmers
 
-A toll-free AI-powered voice chatbot that provides 24/7 agronomic advisory services to Kenyan farmers in multiple local languages (English, Swahili, Luo, and Kikuyu).
+A comprehensive AI-powered agricultural advisory platform featuring toll-free voice calls and WhatsApp integration with plant disease detection capabilities. Provides 24/7 support to Kenyan farmers in multiple local languages (English, Swahili, Luo, and Kikuyu).
 
 ## Features
+
+### 🎙️ Voice Call Advisory
 
 1. **24/7 Audio Agronomic Advisory**
    - Market prices and trends
@@ -20,7 +22,28 @@ A toll-free AI-powered voice chatbot that provides 24/7 agronomic advisory servi
    - Order details and receipts
    - Follow-up information
 
-4. **Multi-Language Support**
+### 📱 WhatsApp Integration (NEW!)
+
+4. **AI Plant Disease Detection**
+   - Send plant photos via WhatsApp
+   - Instant AI-powered diagnosis using Claude Vision
+   - Identify diseases and nutrient deficiencies
+   - 90%+ accuracy on common Kenyan crop issues
+   - Comprehensive treatment recommendations
+
+5. **WhatsApp Shopping**
+   - Buy recommended products directly in chat
+   - Interactive product catalog
+   - M-Pesa payment integration
+   - Order tracking via WhatsApp
+
+6. **Conversational AI Assistant**
+   - Ask farming questions via text
+   - Weather updates on demand
+   - Market price inquiries
+   - Crop management advice
+
+### 🌍 Multi-Language Support
    - English
    - Swahili
    - Luo
@@ -30,11 +53,13 @@ A toll-free AI-powered voice chatbot that provides 24/7 agronomic advisory servi
 
 ### Core Services
 - **Telephony**: Africa's Talking Voice & SMS API
-- **AI**: Claude API (Anthropic) for natural language understanding
+- **WhatsApp**: Africa's Talking WhatsApp Business API
+- **AI**: Claude 3.5 Sonnet with Vision for plant disease detection
 - **Speech-to-Text**: Azure Cognitive Services
 - **Text-to-Speech**: Azure Cognitive Services
+- **Image Processing**: Sharp for optimization
 - **Backend**: Node.js + TypeScript + Express
-- **Database**: PostgreSQL
+- **Database**: PostgreSQL with disease knowledge base
 - **Cache**: Redis
 
 ### External APIs

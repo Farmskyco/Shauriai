@@ -6,6 +6,7 @@ import path from 'path';
 import sequelize from './config/database';
 import logger from './config/logger';
 import webhooksRouter from './routes/webhooks';
+import whatsappRouter from './routes/whatsapp.routes';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler';
 
 // Load environment variables
@@ -28,18 +29,26 @@ app.use(
   })
 );
 
-// Serve static audio files
+// Serve static files
 app.use('/audio', express.static(path.join(__dirname, '../audio_cache')));
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 // Routes
 app.use('/webhooks', webhooksRouter);
+app.use('/whatsapp', whatsappRouter);
 
 // Root endpoint
 app.get('/', (req, res) => {
   res.json({
     service: 'Agronomic Chatbot API',
-    version: '1.0.0',
+    version: '2.0.0',
     status: 'running',
+    features: [
+      'Voice Call Advisory',
+      'WhatsApp Plant Disease Detection',
+      'E-commerce Integration',
+      'Multi-language Support (EN, SW, LUO, KI)',
+    ],
   });
 });
 
